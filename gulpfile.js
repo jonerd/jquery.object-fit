@@ -10,7 +10,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('js/**/*.js')
+  return gulp.src('js/**/objectFit.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(gulp.dest('js'))

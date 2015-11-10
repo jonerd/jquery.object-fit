@@ -2,7 +2,7 @@
 // scripts and/or other plugins which may not be closed properly.
 ;(function ( $, window, document, undefined ) {
 
-	"use strict";
+	'use strict';
 
 		// undefined is used here as the undefined global variable in ECMAScript 3 is
 		// mutable (ie. it can be changed by someone else). undefined isn't really being
@@ -14,9 +14,9 @@
 		// minified (especially when both are regularly referenced in your plugin).
 
 		// Create the defaults once
-		var pluginName = "defaultPluginName",
+		var pluginName = 'objectFit',
 				defaults = {
-				propertyName: "value"
+				propertyName: 'value'
 		};
 
 		// The actual plugin constructor
@@ -41,7 +41,6 @@
 						// and this.settings
 						// you can add more functions like the one below and
 						// call them like so: this.yourOtherFunction(this.element, this.settings).
-						console.log("xD");
 				},
 				yourOtherFunction: function () {
 						// some logic
@@ -52,8 +51,8 @@
 		// preventing against multiple instantiations
 		$.fn[ pluginName ] = function ( options ) {
 				return this.each(function() {
-						if ( !$.data( this, "plugin_" + pluginName ) ) {
-								$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+						if ( !$.data( this, 'plugin_' + pluginName ) ) {
+								$.data( this, 'plugin_' + pluginName, new Plugin( this, options ) );
 						}
 				});
 		};
